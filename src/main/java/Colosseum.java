@@ -89,8 +89,8 @@ public class Colosseum {
         }
 
         //get attack level
-        System.out.println("Split fifty points between attack level and defense level " +
-                            "\nEnter your attack level (1-49): ");
+        System.out.println("Split fifty points between attack level and defense level "
+                            + "\nEnter your attack level (1-49): ");
         tempPokemon.attackLevel = lineScanner.nextInt();
         while (tempPokemon.attackLevel >= MAX_HIT_POINTS || tempPokemon.attackLevel < 1) {
             System.out.println("Sorry. The attack level must be between 1 and 49: ");
@@ -101,7 +101,8 @@ public class Colosseum {
         System.out.println("Enter your defense level (1-" + (MAX_HIT_POINTS - tempPokemon.attackLevel) + "): ");
         tempPokemon.defenseLevel = lineScanner.nextInt();
         while (tempPokemon.defenseLevel > MAX_HIT_POINTS - tempPokemon.attackLevel || tempPokemon.defenseLevel < 1) {
-            System.out.println("Sorry. The defense level must be between 1 and " + (MAX_HIT_POINTS - tempPokemon.attackLevel) + ": ");
+            System.out.println("Sorry. The defense level must be between 1 and "
+                    + (MAX_HIT_POINTS - tempPokemon.attackLevel) + ": ");
             tempPokemon.defenseLevel = lineScanner.nextInt();
         }
 
@@ -138,7 +139,7 @@ public class Colosseum {
      * Write this function.
      */
     public static void determineWinner() {
-        if (firstPokemon.hitPoints > secondPokemon.hitPoints){
+        if (firstPokemon.hitPoints > secondPokemon.hitPoints) {
             System.out.println(firstPokemon.name + " is the winner!");
         } else {
             System.out.println(secondPokemon.name + " is the winner!");
